@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        int clientOS = 1;
+        int clientOS = 0;
 
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для IOS по ссылке");
@@ -10,22 +10,23 @@ public class Main {
             System.out.println("Установите версию приложения для Android по сслыке");
         }
 
-        int clientDeviceYear = 2015;
-        if (clientOS == 0 && clientDeviceYear >= 2015) {
-            System.out.println("Установите обычную версию для IOS по ссылке");
+        int clientDeviceYear = 2014;
+        if (clientOS == 0) {
+            if (clientDeviceYear < 2015) {System.out.println("Установите облегченную версию приложения IOS по ссылке");
+        } else {
+            System.out.println("Установите версию для IOS по ссылке");
 
-        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите обычную версию для Android по ссылке");
-        }
-        if (clientOS == 0 && clientDeviceYear < 2014) {
-            System.out.println("Установите облегченную версию для IOS по ссылке");
-        } else if (clientOS == 1 && clientDeviceYear < 2014) {
-            System.out.println("Установите облегченную версию для Android по ссылке");
-        }
-        ;
+        }}
+            if (clientOS == 1) {
+                if (clientDeviceYear < 2015) {System.out.println("Установите облегченную версию приложения Android по ссылке");
+                } else {
+                    System.out.println("Установите версию для Android по ссылке");
+
+                }}
+
 
         int year = 2021;
-        if (year % 4 == 0) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println("Год високосный");
         } else {
             System.out.println("Год невисокосный");
@@ -33,14 +34,13 @@ public class Main {
 
         int deliveryDistance = 95;
         int deliveryTime = 1;
-        int deliveryTime2 = deliveryTime + 1;
-        int deliveryTime3 = deliveryTime2 + 1;
-        if (deliveryDistance < 20) {
+
+        if (deliveryDistance > 20) {deliveryTime++;}
+
+        if (deliveryDistance > 60) {deliveryTime++;}
+
+             {
             System.out.println("Потребуется дней " + deliveryTime);
-        } else if (deliveryDistance >= 20 && deliveryDistance <= 60) {
-            System.out.println("Потребуется дней " + deliveryTime2);
-        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            System.out.println("Потребуется дней " + deliveryTime3);
         }
 
         int monthNumber = 12;
